@@ -7,18 +7,18 @@ Vehicle Counting using OpenCV is an application that utilizes computer vision te
 
 ## Features
 
-Real-time Vehicle Detection
-Vehicle Tracking
-Automatic Counting
-User-friendly Interface
+-- Real-time Vehicle Detection
+-- Vehicle Tracking
+-- Automatic Counting
+-- User-friendly Interface
 
 ## Technologies Used
 
-Python
-OpenCV 
-Background Subtraction
-Gaussian Blur
-Morphological Operations
-Contour Detection
-Text and Shape Rendering
+-- Python
+-- OpenCV 
+-- Background Subtraction
+-- Gaussian Blur
+-- Morphological Operations
+-- Contour Detection
+-- Text and Shape Rendering
 
