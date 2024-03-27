@@ -29,3 +29,12 @@ https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
 ---
 
+## Images
+
+![Screenshot 2024-03-27 111415](https://github.com/Chamindu77/Vehicle_Counting_System/assets/117502200/08943a8b-ff5c-47cc-8c17-047ca361b943)
+
+
+![Screenshot 2024-03-27 111224](https://github.com/Chamindu77/Vehicle_Counting_System/assets/117502200/47b8c4b2-bdc0-46d3-80d5-da1d9c8dfec3)
+
+---
+
