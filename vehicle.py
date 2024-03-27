@@ -2,12 +2,13 @@ import cv2
 import numpy as np
 
 # Web camera
-cap = cv2.VideoCapture(0 )
+cap = cv2.VideoCapture('video.mp4')
 
 min_width_react = 80 # min width rectangle
 min_height_react = 80 # min height rectangle
 
 count_line_position = 550
+
 # Initialize Subtractor
 algo = cv2.bgsegm.createBackgroundSubtractorMOG()
 
@@ -48,6 +49,11 @@ while True:
         detect.append(center)
         cv2.circle(frame1, center, 4, (0, 0, 255), -1)
 
+        # Adjust rectangle drawing
+        rect_center = (x + int(w / 2), y + int(h / 2))
+        cv2.rectangle(frame1, (x, y), (x + w, y + h), (0, 255, 0), 2)
+        cv2.putText(frame1, "Vehicle" + str(counter), (x, y - 20), cv2.FONT_HERSHEY_TRIPLEX, 1, (255, 244, 0), 2)
+
         for (x, y) in detect:
             if y < (count_line_position + offset) and y > (count_line_position - offset):
                 counter += 1
@@ -55,10 +61,7 @@ while True:
             detect.remove((x, y))
             print("Vehicle Counter:" + str(counter))
 
-        cv2.putText(frame1, "VEHICLE COUNTER:" + str(counter), (450, 70), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 255), 5)
-
-        cv2.rectangle(frame1, (x, y), (x + w, y + h), (0, 255, 0), 2)
-        cv2.putText(frame1, "Vehicle" + str(counter), (x, y - 20), cv2.FONT_HERSHEY_TRIPLEX, 1, (255, 244, 0), 2)
+    cv2.putText(frame1, "VEHICLE COUNTER:" + str(counter), (450, 70), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 255), 5)
 
     cv2.imshow('Detector', dilatada)
     cv2.imshow('Video Original', frame1)
